@@ -6,11 +6,11 @@ import {Component, OnInit} from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit{
-  title = 'Tic Tac Toe';
+  title = 'Car Cards Fighting';
   public isAuthenticated = false;
 
   ngOnInit(): void {
-    this.isAuthenticated = true;
+    //this.isAuthenticated = true;
   }
 
 
@@ -18,5 +18,8 @@ export class AppComponent implements OnInit{
 
   public logout(): void {
     // todo
+    /*this.token = '';
+  this.isLoggedIn = false;
+  this.user = null;*/
   }
 }
