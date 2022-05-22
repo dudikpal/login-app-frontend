@@ -30,7 +30,10 @@
     <mat-icon>gamepad</mat-icon>
     Play
   </button>
-  <button mat-menu-item routerLink="/login" *ngIf="!isAuthenticated">
+  <button mat-menu-item
+          routerLink="/login"
+          *ngIf="!isAuthenticated"
+  >
     <mat-icon>power_settings_new</mat-icon>
     Login
   </button>

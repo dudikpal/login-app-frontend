@@ -20,12 +20,15 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { HomeComponent } from './home/home.component';
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
+import {LoggedInGuardService} from "./login/logged-in-guard.service";
+import { GarageComponent } from './garage/garage.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    HomeComponent
+    HomeComponent,
+    GarageComponent
   ],
   imports: [
     BrowserModule,
@@ -44,7 +47,7 @@ import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
     MatSelectModule,
     MatOptionModule,
   ],
-  providers: [LoginComponent],
+  providers: [LoggedInGuardService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
