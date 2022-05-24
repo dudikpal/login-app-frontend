@@ -27,8 +27,16 @@ export class AppComponent implements OnInit, OnChanges {
 
 
     public logout(): void {
-        sessionStorage.removeItem('AuthToken');
+        /*sessionStorage.removeItem('AuthToken');
         this.isAuthenticated = false;
+        this.router.navigate(['/login']);*/
+        const response = fetch("http://localhost:8080/api/auth/signout", {
+            method: 'POST',
+            headers: {
+                "Content-Type": "application/json"
+            }
+        });
+
         this.router.navigate(['/login']);
     }
 }
