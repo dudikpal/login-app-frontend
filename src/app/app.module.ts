@@ -1,5 +1,5 @@
 import { FlexLayoutModule } from '@angular/flex-layout';
-import { FormsModule } from '@angular/forms';
+import {FormBuilder, FormsModule, ReactiveFormsModule} from '@angular/forms';
 
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatInputModule } from '@angular/material/input';
@@ -22,32 +22,40 @@ import { HomeComponent } from './home/home.component';
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import {LoggedInGuardService} from "./login/logged-in-guard.service";
 import { GarageComponent } from './garage/garage.component';
+import { RegisterComponent } from './register/register.component';
+import {MatDividerModule} from "@angular/material/divider";
+import {MatGridListModule} from "@angular/material/grid-list";
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     HomeComponent,
-    GarageComponent
+    GarageComponent,
+    RegisterComponent
   ],
-  imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    AppRoutingModule,
-    FlexLayoutModule,
-    FormsModule,
-    MatToolbarModule,
-    MatInputModule,
-    MatCardModule,
-    MatMenuModule,
-    MatIconModule,
-    MatButtonModule,
-    MatTableModule,
-    MatSlideToggleModule,
-    MatSelectModule,
-    MatOptionModule,
-  ],
-  providers: [LoggedInGuardService],
+    imports: [
+        BrowserModule,
+        BrowserAnimationsModule,
+        AppRoutingModule,
+        FlexLayoutModule,
+        FormsModule,
+        MatToolbarModule,
+        MatInputModule,
+        MatCardModule,
+        MatMenuModule,
+        MatIconModule,
+        MatButtonModule,
+        MatTableModule,
+        MatSlideToggleModule,
+        MatSelectModule,
+        MatOptionModule,
+        MatDividerModule,
+        ReactiveFormsModule,
+        MatGridListModule,
+    ],
+  providers: [LoggedInGuardService,
+  FormBuilder],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
